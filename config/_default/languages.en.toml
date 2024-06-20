@@ -1,0 +1,16 @@
+title = "Alberto Ruiz Biestro"
+logo = "img/wave_inv.png"
+copyright = "Alberto Ruiz, CC-BY-SA -- based on J Park's theme"
+
+[author]
+name = "Alberto Ruiz Biestro"
+image = "img/me_ictp.jpeg"
+headline = "Engineering Physics"
+group = "**[Nano & Microstructures RG](https://sites.google.com/tec.mx/nanomicrostructures/)**"
+bio = "Engineering Physics student from Monterrey's Institute of Technology"
+img = "me-at-ictp.jpg"
+caption = "**[ICTP -- Quantinuum quantum hackathon](https://indico.ictp.it/event/10163)** award ceremony"
+links = [
+  { github = "https://github.com/modifiedbear" },
+  { email = "mailto:A01707550@tec.mx"}
+]
