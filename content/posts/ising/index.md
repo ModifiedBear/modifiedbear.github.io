@@ -19,7 +19,6 @@ $$
 
 Since the Hamiltonian depends strictly on nearest-neighbours interactions, [it can be used as a model for opinion/voter dynamics](https://ci.ovgu.de/Team/Palina+Bartashevich/Publications/_/Bartashevich2019-Ising.pdf).
 
-
 For this example, we consider a warping grid of size \\(N\\), where the \\(N+1\\)th index is congruent to the first index \\(\text{mod } N\\). All these fancy words state that the grid behaves as when Pac-Man portals to the opposite side of the screen. This is done in the vertical direction as well, as stated by the expressions ```mod(k,n) + 1, ...)``` (the ```+ 1```s are there just due to ```Julia```'s indexing convention.)
 
 The following function finds the Hamiltonian (or energy) for a matrix element \\(M_{ij}\\) with the interaction between its neighbours, as described by the expression above. It also accounts for external interaction of a magnetic field.
@@ -38,18 +37,25 @@ end
 
 If the resulting configuration is preferable (*i.e. it has a lower energy*), then the system accepts this new state. This allows us to only compute the change in energy at the desired index, instead of the whole array.
 
-## Isometric model.
+I use the [CircularArrays.jl](https://github.com/Vexatos/CircularArrays.jl) package, which aided in the construction of periodic boundaries.
 
-The same Hamilising_wb_lossy_singletonian can also be extended to a hexagonal or triangular grid. If we think of the isometric grid as being a cartesian grid transformed by some operator \\(\mathbf{f}\\) (as seen below), we realize that the only change to our energy function is the addition of two diagonal indices.
+## 2D example
+I present a 2D example of the algorithm in action.
 
-![ising iso 1](img/ising/hex1.png)
-![ising iso 2](img/ising/hex2.png)
+{{< youtube Tvvh6Dj0KIo >}}
 
-![ising](img/ising/hex1.png)
+## 3D example
 
-The overall effect over large iterations (order of \\(10^7\\)) is the appearance ofpronounced diagonal patterns (Keep in mind that there is some bias due to the heatmap being cartesian in nature.)
+The above code is robust to changes in dimensions (as well as the use of graphs). In principle, one would only need to update the corresponding `locs` and `space` dimensions, and the algorithm would do the rest. One can see that it also permits an arbitrary `neighbour_spin` definition, whether it be the original *5 point stencil* (in 2D) or any other setting.
 
-![ising iso sl1](img/ising/ising_slanted.png)
-![ising iso sl2](img/ising/ising_slanted_2.png)
-![ising iso sl3](img/ising/ising_slanted_3.png)
+For demonstration purposes, I show a 3D simulation for \\(n_z\in\left\\{5,9\right\\}\\) whith a *9 point stencil* Hamiltonian.
 
+### Tall
+
+{{< youtube NyufiY0Mc6o >}}
+
+### Short 
+
+{{< youtube znPnVB2-duQ >}}
+
+The plots were done using [Makie's volume plot](https://docs.makie.org/stable/reference/plots/volume).

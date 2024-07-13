@@ -13,6 +13,8 @@ timeout = 100000 # pa las imágenes grandotas
 category = 'categories'
 tag = 'tags'
 
+# homepage.layout = "standard list view"
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
