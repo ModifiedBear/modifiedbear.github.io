@@ -3,7 +3,7 @@ title: "Alberto Ruiz Biestro"
 description: "Main page of modifiedbear.github.io"
 ---
 
-{{< lead >}} Hi there! I’m an Engineering Physics student based at Monterrey, Mexico. My fields of interest and expertise vary from quantum computing to stochastic models, computational physics, and more. Proficient in `Julia`, `MATLAB`, and `Python`. Know my way around `Mathematica` and `C++`. Scroll down to see some of my recent experiences and projects. {{< /lead >}}
+{{< lead >}} Hi there! I’m an graduate Physics student \@ Rice University. My fields of interest and expertise vary from quantum computing to stochastic models, computational physics, and more. Proficient in `Julia`, `MATLAB`, and `Python`. Know my way around `Mathematica` and `C++`. Scroll down to see some of my recent experiences and projects. {{< /lead >}}
 
 <!--- Some emphasize block with HTML block  -->
 <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900 bg-primary-600">
